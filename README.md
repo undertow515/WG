@@ -19,6 +19,23 @@ Simple LSTM Discharge Prediction Model
 - Attention 레이어
 - Projection 레이어
 
+## Requirements
+```bash
+torch
+hydroeval
+numpy
+pandas
+pyyaml
+python >= 3.11
+```
+
+3.11 버전 이상의 python을 설치된 가상환경을 생성한 후 다음과 같이 입력하여 패키지를 설치합니다.
+
+```bash
+pip install torch hydroeval numpy pandas pyyaml
+```
+
+
 ## 학습 방법
 모델은 pytorch 라이브러리를 사용하여 학습됩니다. 학습 데이터는 학습용과 검증용으로 분할되며, `Mean Squared Error`(MSE)를 손실 함수로 사용합니다.
 
@@ -46,16 +63,6 @@ main.py 에 config 경로를 인자로 주면 그 설정파일을 읽고 학습�
 python main.py --config ./configs/test.yaml
 ```
 test.yaml 이라는 설정파일을 읽어 runs 폴더내에 결과를 저장합니다.
-
-## Requirements
-```bash
-pytorch
-hydroeval
-numpy
-pandas
-pyyaml
-python >= 3.11
-```
 
 
 
