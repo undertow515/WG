@@ -1,0 +1,36 @@
+# config.yml
+model:
+  src_len: 60
+  tgt_len: 1
+  hidden_size: 16
+  num_layers: 2
+  output_size: 1
+  bidirectional: True
+  dropout: 0.3
+
+  device: 'cuda:0'
+
+data:
+  train_start: '2017-01-01'
+  train_end: '2020-12-31'
+  val_start: '2021-01-01'
+  val_end: '2021-12-31'
+  test_start: '2022-01-01'
+  test_end: '2022-12-31'
+  input_variables: ['Intake', 'Precipitation']
+  target_variables: "Discharge"
+  num_features: 2
+
+
+trainer:
+  learning_rate: 0.001
+  batch_size: 256
+  n_epochs: 1000
+  early_stopping_patience: 50
+  save_interval: 50
+
+root:
+  checkpoint_dir: 'checkpoints'
+  experiment_name: 'test'
+  runs_dir: './runs'
+  data_path: './data/HP_Daily_Data.csv'
