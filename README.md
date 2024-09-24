@@ -47,4 +47,15 @@ python main.py --config ./configs/test.yaml
 ```
 test.yaml 이라는 설정파일을 읽어 runs 폴더내에 결과를 저장합니다.
 
+## Requirements
+```bash
+pytorch
+hydroeval
+numpy
+pandas
+pyyaml
+python >= 3.11
+```
+
+
 
