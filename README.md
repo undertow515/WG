@@ -39,3 +39,12 @@ python main.py --config CONFIG_FILE_PATH
 ```
 
 main.py 에 config 경로를 인자로 주면 그 설정파일을 읽고 학습하며 ./runs 내에 결과가 저장됩니다.
+
+다음은 학습 예시 코드입니다.
+
+```bash
+python main.py --config ./configs/test.yaml
+```
+test.yaml 이라는 설정파일을 읽어 runs 폴더내에 결과를 저장합니다.
+
+
