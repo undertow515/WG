@@ -21,9 +21,9 @@ if __name__ == "__main__":
     argparser = argparse.ArgumentParser()
     argparser.add_argument("--config", type=str, default="./configs/test.yaml")
     args = argparser.parse_args()
-    # main(args.config)
-    configs = glob.glob("./configs/*.yaml")
-    configs = [arg for arg in configs if "test" not in arg]
-    for config in configs:
-        main(config)
+    main(args.config)
+    # configs = glob.glob("./configs/*.yaml")
+    # configs = [arg for arg in configs if "test" not in arg]
+    # for config in configs:
+    #     main(config)
     # 사용법: python main.py --config ./configs/test.yaml
